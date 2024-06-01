@@ -14,7 +14,6 @@ function MealsOverviewScreen({ route }) {
         return mealItem.categoryIds.indexOf(catId) >= 0
     })
     
-
     navigation.setOptions({
         headerTitleStyle: { alignSelf: 'center' }
     })

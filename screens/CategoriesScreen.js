@@ -8,7 +8,7 @@ function CategoriesScreen({ navigation }) {
     function renderCategoryItem({ item }) {
 
         function onPressHandle() {
-            navigation.navigate('MealsOverview', { categoryId: item.id })
+            navigation.navigate('MealsOverview', { categoryId: item.id, isHideHeader: false })
         }
 
         return <GridTile title={item.title} color={item.color} onPress={onPressHandle} />

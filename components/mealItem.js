@@ -1,12 +1,20 @@
+import { useNavigation } from "@react-navigation/native"
 import { View, Text, Pressable, Image, StyleSheet } from "react-native"
 
-function MealItem({ data = {} }) {
+function MealItem({ data = {}, onPress }) {
+
+    const navigation = useNavigation()
 
     const { title, imageUrl } = data || {}
+    const handleNavigation = () => {
+        navigation.navigate("MealsDetailsScreen", {
+            data,
+        })
+    }
 
     return (
         <View style={{ marginBottom: 30 }}>
-            <Pressable>
+            <Pressable onPress={handleNavigation}>
                 <View>
                     <Image source={{ uri: imageUrl }} style={styles.image} />
                     <Text style={styles.title}>

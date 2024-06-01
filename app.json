@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "restaurent-app",
-    "slug": "restaurent-app",
+    "slug": "expo-restaurent-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -18,10 +18,17 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.ajstart9.exporestaurentapp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "58e4baaf-65e4-4121-a3d6-320335bd6d59"
+      }
+    },
+    "owner": "aj-start9"
   }
 }

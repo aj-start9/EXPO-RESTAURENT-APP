@@ -1,44 +1,12 @@
 import { Image, StyleSheet, Platform } from 'react-native';
-import CategoriesScreen from './screens/CategoriesScreen'
-import MealsOverviewScreen from './screens/MealsOverviewScreen'
-import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import RootStack from './navigation/RootStack';
 
-
-const Stack = createNativeStackNavigator()
 
 export default function HomeScreen() {
   return (
     <>
-      <NavigationContainer>
-        <Stack.Navigator screenOptions={{
-          headerStyle: {
-            backgroundColor: '#351401',
-            elevation: 0,
-          },
-          headerTintColor: 'white',
-          contentStyle: {
-            backgroundColor: 'white'
-          }
-        }}>
-          <Stack.Screen
-            name="MealCategory"
-            component={CategoriesScreen}
-            options={{ title: 'Meal Category',
-            headerTitleAlign: 'center'
-             }}
-          />
-          <Stack.Screen
-            name="MealsOverview"
-            component={MealsOverviewScreen}
-            options={{
-              title: 'Meal Overview',
-              headerTitleAlign: 'center'
-            }}
-
-          />
-        </Stack.Navigator>
-      </NavigationContainer>
+      <RootStack />
     </>
   );
 }
